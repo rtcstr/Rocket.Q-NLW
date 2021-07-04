@@ -1,0 +1,157 @@
+* {
+
+    /* reset navegator presets*/
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+
+    /* colors variables */
+
+    --black: #0D114F;
+    --white: #FAFAFA;
+    --blue: #3485FF;
+    --red: #E83F5B;
+    --light-blue: #E0ECFF;
+    --background: #FBFCFF;
+    --overlay: #040911;
+    --icons-details: #A5B0C1;
+
+    /* gray tones */
+
+    --gray-dark: #4D5E77;
+    --gray-blue: #A1B2CD;
+    --gray-medium: #D3D9E2;
+    --gray-light: #E5EAF1;
+    
+    --disabled: #EAECF1;
+
+    /* hover tones */
+
+    --hover-blue: #5699FF;
+    --hover-red: #EA4B65;
+    --hover-gray: #8794A7;
+
+    /*1rem=16px (User Agent)= 100%*/
+    font-size: 62.5% /* 10px */
+    
+}
+
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: var(--background);
+}
+
+body, button, input, textarea {
+    /*clamp: time break= responsive issues: 
+    min-default-max letter size*/
+    font-size: clamp(14px, 1.6rem, 2vw); 
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
+   
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* hide code for visual layout but not for the search motors */
+
+.sr-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/* Input and buttons */ 
+
+input, button, .button {   
+    height: 5rem;
+    border-radius: .8rem;    
+}
+
+button, .button{
+    background: var(--blue);
+    color: var(--white);
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: filter .2s;
+
+    cursor: pointer;
+    
+}
+
+button:hover, .button:hover {
+    filter: brightness(1.2);
+   
+}
+
+button > img,
+.button > img {
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+button.outlined,
+.button.outlined {
+
+    background: var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+
+}
+
+button.red,
+.button.red {
+    background: var(--red);
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+
+
+}
+
+button.gray,
+.button.gray {
+
+    background: var(--gray-light);
+    color: var(--gray-dark);
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+
+/* HEADER */
+
+.content header {
+    width: 80%;
+    margin: 3.5rem auto;
+
+}
+
+.content header img {
+    width: 16.7rem;
+
+}

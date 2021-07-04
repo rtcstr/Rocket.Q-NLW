@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>       
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="edge">
+        <title>Sala - Rocket.Q</title>
+        <!--<author>Rita Brilhante - Missão Discover NLW RocketSeat 2021</author>-->
+             
+        <!--View Port-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--CSS-->
+        <link rel="stylesheet" href="style/global.css">
+        <link rel="stylesheet" href="style/room.css">
+        <link rel="stylesheet" href="style/modal.css">
+
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet"> 
+
+        <!--SCRIPT-->
+
+        <script src="scripts/main.js" defer type="module"></script>
+    </head>
+
+
+    <body>
+        <div id=room class="content">
+
+            <header>
+                <a href="#">
+                    <img src="images/logo.svg" alt="Rocket.Q logo"/>
+                </a>
+
+                <div class="buttons">
+                    <div class="button outlined" id="room-id" data-id="323243" alt="Copiar número da sala">
+                        #323243
+                        <img src="images/copy.svg"/>
+                    </div>
+
+                    <a class="button" href="*">
+                        <img src="images/users-white.svg" alt="Criar uma sala"/>
+                        Criar Sala
+                    </a>
+                </div>
+            </header>
+
+            <main>
+                <section id="question-form">
+                    <h2>Faça sua Pergunta</h2>
+                    <form action="">
+                        <label class="sr-only" for-id="question">O que você quer perguntar?</label>
+                        <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>
+
+                        <footer>
+                            <div>
+                                <img src="images/lock.svg" alt="Cadeado">
+                                Esta pergunta é anônima.
+                            </div>
+
+                            <button>Enviar</button>
+                        </footer>
+                    </form>
+                </section>
+
+
+                <section id="questions">
+                    <h2 class="sr-only">Perguntas da comunidade</h2>
+
+                   <div class="questions">
+
+                        <div class="question-card">
+                            <div class="question-content">
+                                <div class="user">
+                                    <img src="images/one-user.svg" alt="avatar">
+
+                                </div>                               
+                                <div class="question">
+                                    <p>Qual a diferença entre const, let e var no JavaScript?</p>
+                                </div>
+                            </div>
+
+                            <div class="actions">
+                                
+                                <a class="check" href="#" data-id="2">
+                                    <img src="images/check.svg" alt="Marcar como lida">
+                                    Marcar como lida
+                                </a>
+
+                                <a class="delete" href="#" data-id="2">
+                                    <img src="images/trash.svg" alt="Excluir">
+                                    Excluir
+                                </a>
+                            </div>
+                            
+                        </div>
+
+                        <div class="question-card">
+                            <div class="question-content">
+                               
+                               
+                                <div class="user">
+                                    <img src="images/one-user.svg" alt="avatar">
+
+                                </div>
+                                
+                                <div class="question">
+                                    <p>O que é TypeScript?</p>
+                                </div>
+                            </div>
+
+                            <div class="actions">
+                                
+                                <a class="check" href="#" data-id="3">
+                                    <img src="images/check.svg" alt="Marcar como lida">
+                                    Marcar como lida
+                                </a>
+
+                                <a class="delete" href="#" data-id="3">
+                                    <img src="images/trash.svg" alt="Excluir">
+                                    Excluir
+                                </a>
+                            </div>
+                                
+                            
+                            
+                        </div>
+
+
+                        <div class="question-card">
+                            <div class="question-content">
+                               
+                               
+                                <div class="user">
+                                    <img src="images/one-user.svg" alt="avatar">
+
+                                </div>
+                                
+                                <div class="question">
+                                    <p>Você já sabe quais as bases você precisa melhorar para alcançar o próximo nível com maestria? Definiu foco e objetivo para seguir em frente? Estou curiosa e embasbacada com sua perseverança por ter alcançado a terceira aula e sei que vai continuar até o fim. Então, responde ai pra gente!</p>
+                                </div>
+                            </div>
+
+                            <div class="actions">
+                                
+                                <a class="check" href="#" data-id="4">
+                                    <img src="images/check.svg" alt="Marcar como lida">
+                                    Marcar como lida
+                                </a>
+
+                                <a class="delete" href="#" data-id="4">
+                                    <img src="images/trash.svg" alt="Excluir">
+                                    Excluir
+                                </a>
+                            </div>
+                                
+                            
+                            
+                        </div>
+
+                        <div class="question-card read">
+                            <div class="question-content">
+                                <div class="user">
+                                    <img src="images/one-user.svg" alt="avatar">
+
+                                </div>
+                                <div class="question">
+                                    <p>O que é JavaScript?</p>
+                                </div>
+                            </div>
+
+                            <div class="actions">
+                                <a class="delete" href="#" data-id="1">
+                                    <img src="images/trash.svg" alt="Excluir">
+                                    Excluir
+                                </a>
+                            </div>
+
+                   </div>
+
+                </section>
+            </main>
+        </div>
+
+
+
+        <!-- MODAL -->
+
+        <div class="modal-card">
+            <div class="modal">
+                <h2>Excluir pergunta</h2>
+                <p>Tem ceterza que deseja excluir esta pergunta?</p>
+
+                <form action="#" method="POST">
+                    <label class="sr-only" for-id="password">Digite sua senha admin</label>
+                    <input type="password" id="password" name="password" placeholder="Digite a senha admin"/>
+
+                    <div class="buttons">
+                        <div class="button gray cancel">Cancelar</div>
+                        <button class="button red">Sim, excluir</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    
+    </body>
+</html>
